@@ -46,7 +46,7 @@ macro_rules! build_protocol_enum {
             fn from_str(raw: &str) -> Result<Self> {
                 match raw {
                     $( $alph => Ok($var), )*
-                    _ => Err(Error::UnkownProtocolString),
+                    _ => Err(Error::UnknownProtocolString),
                 }
             }
         }
@@ -66,7 +66,7 @@ macro_rules! build_protocol_enum {
             pub fn from(raw: u64) -> Result<Protocol> {
                 match raw {
                     $( $val => Ok($var), )*
-                    _ => Err(Error::UnkownProtocol),
+                    _ => Err(Error::UnknownProtocol),
                 }
             }
 

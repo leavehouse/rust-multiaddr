@@ -7,8 +7,8 @@ pub type Result<T> = ::std::result::Result<T, Error>;
 /// Error types
 #[derive(PartialEq, Eq, Clone, Copy, Debug)]
 pub enum Error {
-    UnkownProtocol,
-    UnkownProtocolString,
+    UnknownProtocol,
+    UnknownProtocolString,
     InvalidMultiaddr,
     MissingAddress,
     ParsingError,
@@ -25,8 +25,8 @@ impl error::Error for Error {
         use self::Error::*;
 
         match *self {
-            UnkownProtocol => "Unkown protocol",
-            UnkownProtocolString => "Unkown protocol string",
+            UnknownProtocol => "Unknown protocol",
+            UnknownProtocolString => "Unknown protocol string",
             InvalidMultiaddr => "Invalid multiaddr",
             MissingAddress => "protocol requires address, none given",
             ParsingError => "failed to parse",
